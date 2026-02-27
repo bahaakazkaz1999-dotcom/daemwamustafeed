@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - داعم ومستفيد</title>
+    <meta name="description" content="تواصل مع فريق داعم ومستفيد عبر الواتساب للاستفسار أو التنسيق للدعم.">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h1>داعم ومستفيد</h1>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="main-nav">
+                <a href="index.html">الرئيسية</a>
+                <a href="publish.html">نشر حالة</a>
+                <a href="completed.html">الأعمال المنجزة</a>
+                <a href="contact.html">اتصل</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">تواصل</span>
+                    <h2>تواصل معنا</h2>
+                    <p>نحن هنا للإجابة على استفساراتكم والتنسيق للدعم</p>
+                </div>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto; background: var(--white); padding: 3rem; border-radius: 30px; box-shadow: var(--shadow-hover);">
+                    <i class="fas fa-phone-alt" style="font-size: 4rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 2rem; color: var(--primary-dark); margin-bottom: 1rem;">تواصل عبر واتساب</h3>
+                    <p style="margin-bottom: 2rem; color: var(--gray);">للتواصل السريع، انقر على الزر أدناه</p>
+                    <a href="#" id="contact-whatsapp" class="whatsapp-btn" style="font-size: 1.5rem; padding: 1rem 2rem;">
+                        <i class="fab fa-whatsapp"></i> راسلنا الآن
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 داعم ومستفيد | جميع الحقوق محفوظة</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#" id="whatsapp-footer"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contact-whatsapp').addEventListener('click', function(e) {
+            e.preventDefault();
+            openWhatsApp('استفسار من صفحة الاتصال');
+        });
+
+        document.getElementById('whatsapp-footer').addEventListener('click', function(e) {
+            e.preventDefault();
+            openWhatsApp('مرحباً، تواصل من الصفحة الرئيسية');
+        });
+    </script>
+</body>
+</html>

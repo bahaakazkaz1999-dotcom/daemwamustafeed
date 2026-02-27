@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "siteData"
+    label: "بيانات الموقع"
+    files:
+      - name: "data"
+        label: "البيانات الرئيسية"
+        file: "data/data.json"
+        fields:
+          - label: "الحالات الإنسانية"
+            name: "humanitarian"
+            widget: "list"
+            fields:
+              - {label: "العنوان", name: "title", widget: "string"}
+              - {label: "الوصف", name: "description", widget: "text"}
+              - {label: "الصورة", name: "image", widget: "image"}
+              - {label: "رسالة واتساب", name: "whatsapp_message", widget: "string"}
+          - label: "المشاريع"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "العنوان", name: "title", widget: "string"}
+              - {label: "الوصف", name: "description", widget: "text"}
+              - {label: "الصورة", name: "image", widget: "image"}
+              - {label: "رسالة واتساب", name: "whatsapp_message", widget: "string"}
+          - label: "الأعمال المنجزة"
+            name: "completed"
+            widget: "list"
+            fields:
+              - {label: "العنوان", name: "title", widget: "string"}
+              - {label: "الوصف", name: "description", widget: "text"}
+              - {label: "الصورة", name: "image", widget: "image"}

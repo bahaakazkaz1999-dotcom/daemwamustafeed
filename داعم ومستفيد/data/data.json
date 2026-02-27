@@ -1,0 +1,42 @@
+{
+    "humanitarian": [
+      {
+        "title": "مساعدة عائلة أبو أحمد",
+        "description": "عائلة مكونة من 6 أفراد تعيش في منزل آيل للسقوف، بحاجة مواد بناء.",
+        "image": "/images/1.jpg",
+        "whatsapp_message": "مساعدة عائلة أبو أحمد"
+      },
+      {
+        "title": "عملية طارئة لطفلة",
+        "description": "طفلة تحتاج عملية قلب مكلفة، نسعى لتوفير التكاليف.",
+        "image": "/images/case2.jpg",
+        "whatsapp_message": "عملية طارئة لطفلة"
+      }
+    ],
+    "projects": [
+      {
+        "title": "تزفيت طريق قرية النجاح",
+        "description": "طريق ترابي يخدم 300 عائلة، نحتاج توفير معدات وتكلفة تزفيت.",
+        "image": "/images/project1.jpg",
+        "whatsapp_message": "تزفيت طريق قرية النجاح"
+      },
+      {
+        "title": "كفالة أيتام",
+        "description": "كفالة 10 أطفال أيتام لمدة عام، نسعى لتأمين مصاريف التعليم والمعيشة.",
+        "image": "/images/project2.jpg",
+        "whatsapp_message": "كفالة أيتام"
+      }
+    ],
+    "completed": [
+      {
+        "title": "تزفيت طريق السلام",
+        "description": "تم تزفيت الطريق بالكامل في يناير 2025 بمساهمة 50 متبرعًا.",
+        "image": "/images/done1.jpg"
+      },
+      {
+        "title": "مساعدات الشتاء",
+        "description": "توزيع 200 بطانية ومدافئ على الأسر المتضررة من البرد.",
+        "image": "/images/done2.jpg"
+      }
+    ]
+  }
