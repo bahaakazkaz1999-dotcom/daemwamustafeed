@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://daem-mostafeed.netlify.app/sitemap.xml
