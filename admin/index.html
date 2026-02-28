@@ -4,10 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مدير المحتوى - داعم ومستفيد</title>
+  <!-- تحديد مسار ملف الإعدادات قبل تحميل Decap CMS -->
+  <script>
+    window.CMS_CONFIG_URL = '/config.yml'; // المسار الصحيح في الجذر
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
-  <!-- هذا السكريبت ضروري لتسجيل الدخول بـ Netlify Identity -->
+  <!-- سكريبت تسجيل الدخول عبر Netlify Identity -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </body>
 </html>
