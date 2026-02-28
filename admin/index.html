@@ -4,14 +4,86 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مدير المحتوى - داعم ومستفيد</title>
-  <!-- تحديد مسار ملف الإعدادات قبل تحميل Decap CMS -->
-  <script>
-    window.CMS_CONFIG_URL = '/config.yml'; // المسار الصحيح في الجذر
-  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
-  <!-- سكريبت تسجيل الدخول عبر Netlify Identity -->
+  <!-- سكريبت Netlify Identity -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // تفعيل التهيئة اليدوية
+    window.CMS_MANUAL_INIT = true;
+
+    // التعامل مع تسجيل الدخول عبر Netlify Identity
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', (user) => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+
+    // تهيئة Decap CMS بعد تحميل الصفحة
+    window.addEventListener('load', function() {
+      window.CMS.init({
+        config: {
+          backend: {
+            name: 'git-gateway',
+            branch: 'main',
+          },
+          media_folder: 'images/uploads',
+          public_folder: '/images/uploads',
+          collections: [
+            {
+              name: 'siteData',
+              label: 'بيانات الموقع',
+              files: [
+                {
+                  name: 'data',
+                  label: 'البيانات الرئيسية',
+                  file: 'data/data.json',
+                  fields: [
+                    {
+                      label: 'الحالات الإنسانية',
+                      name: 'humanitarian',
+                      widget: 'list',
+                      fields: [
+                        { label: 'العنوان', name: 'title', widget: 'string' },
+                        { label: 'الوصف', name: 'description', widget: 'text' },
+                        { label: 'الصورة', name: 'image', widget: 'image' },
+                        { label: 'رسالة واتساب', name: 'whatsapp_message', widget: 'string' }
+                      ]
+                    },
+                    {
+                      label: 'المشاريع',
+                      name: 'projects',
+                      widget: 'list',
+                      fields: [
+                        { label: 'العنوان', name: 'title', widget: 'string' },
+                        { label: 'الوصف', name: 'description', widget: 'text' },
+                        { label: 'الصورة', name: 'image', widget: 'image' },
+                        { label: 'رسالة واتساب', name: 'whatsapp_message', widget: 'string' }
+                      ]
+                    },
+                    {
+                      label: 'الأعمال المنجزة',
+                      name: 'completed',
+                      widget: 'list',
+                      fields: [
+                        { label: 'العنوان', name: 'title', widget: 'string' },
+                        { label: 'الوصف', name: 'description', widget: 'text' },
+                        { label: 'الصورة', name: 'image', widget: 'image' }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      });
+    });
+  </script>
 </body>
 </html>
